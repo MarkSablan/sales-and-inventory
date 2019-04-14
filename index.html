@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="./css/base-styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/index-styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/chart.css"> 	
+
+	<script type="text/javascript" src="./lib/jquery.js"></script>
+	<script type="text/javascript" src="./lib/chart.js"></script>
+
+</head>
+<body>
+	
+	<div class="container">	
+		
+		<div class="sidebar" id="sidebar">
+			
+			<div class="top-section">
+				<h4>Lorem ipsum dolor.</h4>
+			</div>
+
+			<div class="profile">
+				<img src="./img/picture.jpg" alt="profile-pic">
+				<h5 class="name">Lastname Firstname</h5>
+			</div>
+
+			<h5 class="nav-title">Main Navigation</h5>
+
+			<nav>
+				
+				<ul>
+					<a href="#"><li class="active">Dashboard</li></a>
+					<a href="#"><li>Lorem</li></a>
+					<a href="#"><li>Lorem</li></a>
+					<a href="#"><li>Lorem</li></a>
+					<a href="#"><li>Lorem</li></a>
+					<a href="#"><li>Lorem</li></a>
+					<a href="#"><li>Lorem</li></a>
+				</ul>
+			</nav>
+
+		</div>
+
+		<div class="main" id="main">
+
+			<div class="top-section">
+				<div class="hbg-menu" id="hbg-menu">=</div>
+				<h4 class="comp-name" id="comp-name">Lorem ipsum dolor.</h4>
+			</div>
+			
+			<div class="main-content">
+				<div class="main-title"><h4>Dashboard</h4></div>
+				<section class="cards">
+
+					<div class="card">
+						<h2>Lorem</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<div class="card-footer">
+							<a href="">More Info</a>
+						</div>
+					</div>
+					<div class="card">
+						<h2>Ipsum</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<div class="card-footer">
+							<a href="">More Info</a>
+						</div>
+					</div>
+					<div class="card">
+						<h2>Dolor</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<div class="card-footer">
+							<a href="">More Info</a>
+						</div>
+					</div>
+					<div class="card">
+						<h2>Sit</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<div class="card-footer">
+							<a href="">More Info</a>
+						</div>
+					</div>
+					
+				</section>
+
+				<section class="contents">
+					
+					<div class="cont">
+						<div class="cont-header">
+							<h3 class="cont-title">Lorem ipsum dolor.</h3>
+							<div class="cont-tabs">
+								<div class="tab" onclick="toggle('bar')">
+									<div class="indicator"></div>
+									Bar Chart
+								</div>
+								<div class="tab" onclick="toggle('pie')">
+									<div class="indicator"></div>
+									Pie Chart
+								</div>
+							</div>
+						</div>
+
+						<div class="cont-main">
+							<canvas id="chart" height="350px" style="margin: 0 auto"></canvas>
+						</div>
+					</div>
+
+					<div class="cont">
+						<div class="cont-header">
+							<h3 class="cont-title">Lorem ipsum.</h3>
+							<div class="cont-tabs">
+								<div class="tab">
+									<div class="indicator active-top"></div>
+									Lorem
+								</div>
+								<div class="tab">
+									<div class="indicator"></div>
+									Ipsum
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</section>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="./js/general-scripts.js"></script>
+	<script type="text/javascript" src="./js/chart-scripts.js"></script>
+
+</body>
+</html>
