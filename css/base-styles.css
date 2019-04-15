@@ -6,6 +6,7 @@ body{
 	color: #eaeaea;
 }
 
+/*container of the entire page*/
 .container{
 	width: 100%;
 	height: 100vh;
@@ -13,11 +14,13 @@ body{
 	display: flex;
 }
 
+/*Top Section of the main contend and sidebar*/
 .top-section{
 	height: 50px;
 	background-color: #37819b;
 }
 
+/*Sidebar*/
 .sidebar{
 	width: 220px;
 	height: 100%;
@@ -25,6 +28,7 @@ body{
 	transition: 0.5s;
 }
 
+/*Hides the sidebar*/
 .hide-menu{
 	width: 0;
 	transform: translateX(-220px);
@@ -92,6 +96,7 @@ body{
 	transition: 0.5s;
 }
 
+/*Main container*/
 .main-toggled{
 	width: 100%;
 }
@@ -180,6 +185,33 @@ td, th {
     overflow-x: hidden;
 }
 
+/*Tabs .cont-tabs*/
+
+ .cont-tabs{
+	margin-left: auto;
+	display: flex;
+}
+
+.cont-tabs .tab{
+	padding: 0 10px;
+	height: 100%;
+	line-height: 45px;
+	cursor: pointer;
+}
+
+.cont-tabs .tab .indicator{
+	width: calc(100% + 20px);
+	height: 5px;
+	/*background-color: green;*/
+	transform: translateX(-10px);
+	transition: 0.3s;
+}
+
+ .cont-tabs .tab:hover .indicator,
+ .cont-tabs .tab .indicator:hover{
+	background-color: green;
+}
+
 /*Selected / active tabs*/
 
 .active{
@@ -188,4 +220,48 @@ td, th {
 
 .active-top{
 	background-color: green;
+}
+
+/*Scrollabe Container*/
+
+.scroll-container{
+	position: relative;
+	width: calc(100% - 1.5 em);
+	/*background-color: red;*/
+	padding: 0 1.5em;
+	overflow-y: scroll;
+}
+
+.scroll-container .scroll-content{
+	width: 100%;
+	height: 40px;
+	margin: 5px 0;
+	background-color: #eaeaea;
+	cursor: pointer;
+	text-align: center;
+}
+
+.scroll-container .scroll-content .title{
+	margin: 0;
+	line-height: 40px;
+	font-size: 15px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

@@ -87,30 +87,9 @@
 	line-height: 50px;
 }
 
-.main .main-content .cont .cont-header .cont-tabs{
-	margin-left: auto;
-	display: flex;
+.scroll-container{
+	height: 350px;
 }
-
-.main .main-content .cont .cont-header .cont-tabs .tab{
-	padding: 0 10px;
-	height: 100%;
-	line-height: 45px;
-	cursor: pointer;
-}
-
-.main .main-content .cont .cont-header .cont-tabs .tab .indicator{
-	width: calc(100% + 20px);
-	height: 5px;
-	/*background-color: green;*/
-	transform: translateX(-10px);
-}
-
-.main .main-content .cont .cont-header .cont-tabs .tab:hover .indicator,
-.main .main-content .cont .cont-header .cont-tabs .tab .indicator:hover{
-	background-color: green;
-}
-
 
 /*.main .main-content .cont .cont-header .cont-tabs ul li{
 	margin-right: 10px;

@@ -61,5 +61,3 @@ function toggle(type){
         previous = 'bar';
     }
 }
-
-createChart('bar');
