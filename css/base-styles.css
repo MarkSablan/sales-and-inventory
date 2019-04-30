@@ -72,21 +72,90 @@ body{
 	cursor: default;
 }
 
-.sidebar nav ul{
-	list-style-type: none;
-	text-align: left;
-	padding: 0;
-	margin: 0;
+/*navigation - accordion*/
+.accordion-nav{
+	width: 100%;
+	height: calc(100% - 230px);
+	background-color: #1d2128;
+	position: relative;
+	overflow-y: scroll;
 }
 
-.sidebar nav ul li{
-	padding: 1em 1em;
-	font-size: 14px;
+.accordion-nav::-webkit-scrollbar {
+  width: 5px;
 }
 
-.sidebar nav ul a{
+/* Track */
+.accordion-nav::-webkit-scrollbar-track {
+  background-color: #1d2128;
+}
+ 
+/* Handle */
+.accordion-nav::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.accordion-nav::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.accordion-nav a{
+	color: #fff;
 	text-decoration: none;
-	color: #eaeaea;
+}
+
+.accordion-nav .item{
+	/*position: relative;*/
+}
+
+.accordion-nav .arrow{
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	transform:translateX(5px) translateY(28px) rotate(45deg);
+	background-color: #1d2128;
+}
+
+.accordion-nav .item .item-title{
+	display: block;
+	padding: 10px;
+}
+
+.accordion-nav .item .sub-menu{
+	background-color: #121419;
+	overflow: hidden;
+	transition: 0.8s;
+}
+
+/*hides sub-menu for initial display*/
+.accordion-nav .item .hide-sub{
+	max-height: 0;
+}
+
+/*open sub-menu*/
+.drop-sub-menu{
+	padding-top: 15px;
+	max-height: 20em;
+}
+
+.accordion-nav .item .sub-menu *{
+	display: block;
+	font-size: 14px;
+	padding: 10px 10px 10px 20px;
+	background-color: #121419;
+	position: relative;
+}
+
+.accordion-nav .item .sub-menu *:hover{
+	background-color: #111;
+}
+
+.accordion-nav .nav-footer{
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	font-size: 12px;
 }
 
 .main{

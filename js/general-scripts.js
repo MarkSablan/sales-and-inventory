@@ -19,12 +19,24 @@ $('#hbg-menu').on('click', function(){
 	}, 600);
 });
 
+// For Tabs 
 //Highlights (on the top) the clicked tab
 $('.cont-tabs').find('.tab').on('click' , function(){
-	// console.log($(this));
 	let clickedTab = $(this).find('.indicator');
 	let parentNode = $(this).parent();
-	// console.log(clickedTab + "a");
+
 	parentNode.find("*").removeClass("active-top");
 	clickedTab.addClass("active-top");
+});
+
+// For accordion navigation menu
+$('.accordion-nav').find('.item').on('click', function (){
+	let clicked = $(this).find('.sub-menu');
+	let parent = $(this).parent();
+
+	parent.find('*').removeClass('drop-sub-menu');
+	parent.find('.sub-menu').addClass('hide-sub');
+	clicked.removeClass('hide-sub');
+	clicked.addClass('drop-sub-menu');
+	// console.log(clicked);
 });
