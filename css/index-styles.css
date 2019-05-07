@@ -58,7 +58,7 @@
 
 .main .main-content .contents{
 	width: 100%;
-	height: calc(100vh - 265px);
+	height: calc(100vh - 275px);
 	padding: 20px 0;
 	display: grid;
 	grid-template-columns: 3fr 2fr;
@@ -90,6 +90,8 @@
 .scroll-container{
 	height: 350px;
 }
+
+
 
 /*.main .main-content .cont .cont-header .cont-tabs ul li{
 	margin-right: 10px;

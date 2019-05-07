@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SIS | Customer - View</title>
+	
+	<link rel="stylesheet" type="text/css" href="./css/base-styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/view-customers-styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/chart.css"> 	
+
+	<script type="text/javascript" src="./lib/jquery.js"></script>
+
+</head>
+<body>
+	
+	<div class="container">	
+		
+		<div class="sidebar" id="sidebar">
+			
+			<div class="top-section">
+				<h4>SIS</h4>
+			</div>
+
+			<div class="profile">
+				<img src="./img/picture.jpg" alt="profile-pic">
+				<h5 class="name">Lastname Firstname</h5>
+			</div>
+
+			<h5 class="nav-title">Main Navigation</h5>
+<!-- Navigation -->
+			<nav class="accordion-nav">
+
+				<div class="item">
+					<a href="index.html" class="title-cont">
+						<div class="item-title">Dashboard</div>
+						<div class="icon dashboard-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Customer</div>
+						<div class="icon customer-icon"></div>
+					</a>
+					<div class="sub-menu drop-sub-menu">
+						<a href="#" class="active">View Customers</a>
+						<a href="#">Add Customer</a>
+						<a href="#">Manage Customer</a>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Supplier</div>
+						<div class="icon supplier-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="#">View Suppliers</a>
+						<a href="#">Add Supplier</a>
+						<a href="#">Manage Supplier</a>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Stock</div>
+						<div class="icon stock-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="#">View Stock</a>
+						<a href="#">Add Stock</a>
+						<a href="#">Purchase Stock</a>
+						<a href="#">View Stock Purchase</a>
+						<a href="#">View Stock Availability</a>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Sales</div>
+						<div class="icon sales-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="#">Add Sales</a>
+						<a href="#">View Sale</a>
+					</div>
+				</div>
+	
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Payment</div>
+						<div class="icon payment-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Outstanding</div>
+						<div class="icon outstanding-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Pending</div>
+						<div class="icon pending-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Report</div>
+						<div class="icon report-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="#">Sales</a>
+						<a href="#">Inventory</a>
+					</div>
+				</div>
+
+				<div class="nav-footer">Lorem ipsum dolor sit amet.</div>
+			</nav>
+
+				<div class="nav-footer">Lorem ipsum dolor sit amet.</div>
+			</nav>
+		</div>
+
+<!-- Main section -->
+
+		<div class="main" id="main">
+
+			<div class="top-section">
+				<div class="hbg-menu" id="hbg-menu">=</div>
+				<h4 class="comp-name" id="comp-name">SIS</h4>
+			</div>
+			
+			<div class="main-content">
+<!-- Main Content -->
+<!-- Content title -->
+				<div class="main-title"><h4>Customers - View</h4></div>
+
+				<!-- Contents -->
+				<section id="section-a">
+					
+					<div class="search">
+						<input class="search-field" type="text"><button class="search-btn">0</button><button class="clear-btn">X</button>
+					</div>
+
+					<div class="button-group">
+						<button>Add New</button>
+						<button>Filter</button>
+						<button class="add-btn">Add Record</button>
+					</div>
+
+				
+				</section>
+
+				<section id="section-b">
+					<!-- <table>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Last Name</th>
+								<th>First Name</th>
+								<th>Phone Number</th>
+								<th>Email Address</th>
+								<th>Address</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>sablan</td>
+								<td>mark</td>
+								<td>019218237</td>
+								<td>makguererro.011@gmail.com</td>
+								<td>Caint, Rizal</td>
+							</tr>
+						</tbody>
+					</table> -->
+
+					<table class="table-flat">
+						<div class="table-title"><p class="th-title">Customer List</p></div>
+						<thead>
+							<tr class="table-headings">
+								<th class="col-50">ID</th>
+								<th class="col-120">Last Name</th>
+								<th class="col-120">First Name</th>
+								<th class="col-150">Phone Number</th>
+								<th>Email Address</th>
+								<th>Address</th>
+								<th class="col-action col-50">ACTN</th>
+							</tr>
+						</thead>
+
+						<tbody id="customersTbl">
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-120">sablan</td>
+								<td class="col-120">mark</td>
+								<td class="col-150">019218237</td>
+								<td>makguererro.011@gmail.com</td>
+								<td>Caint, Rizal</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-120">sablan</td>
+								<td class="col-120">mark</td>
+								<td class="col-150">019218237</td>
+								<td>makguererro.011@gmail.com</td>
+								<td>Caint, Rizal</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				
+			</div>
+
+			<div id="add-record" class="add-record">
+				<div class="header">
+					<h3>Add Record - Customer</h3>
+					<div class="close-btn add-btn">X</div>
+				</div>
+				<div class="fields">
+					<label for="first-name" >First Name</label>
+					<input type="text" name="first-name" required="">
+					<label for="last-name">Last Name</label>
+					<input type="text" name="last-name" required="">
+					<label for="phone">Phone Number</label>
+					<input type="phone" name="phone" required="">
+					<label for="email">Email Address</label>
+					<input type="email" name="email" required="">
+					<label for="address">Address</label>
+					<input type="text" name="address" required="">
+				</div>
+
+				<div class="footer">
+					<input type="submit">
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="./js/general-scripts.js"></script>
+	<!-- <script type="text/javascript" src="./js/chart-scripts.js"></script> -->
+
+</body>
+</html>
+
+
+<!-- Structure -->
+
+<!-- 
+body
+	contaner -- whole window container
+
+		Sidebar 
+
+			navigation section
+
+		Sidebar
+
+
+		main -- main section
+
+			main-content  
+
+				-- contents
+
+			main-content
+
+		main
+
+	contaner
+
+body
+ -->

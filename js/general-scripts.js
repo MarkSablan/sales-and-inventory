@@ -40,3 +40,9 @@ $('.accordion-nav').find('.item').on('click', function (){
 	clicked.addClass('drop-sub-menu');
 	// console.log(clicked);
 });
+
+$('.add-btn').on('click', function(){
+	$('#add-record').toggleClass('add-record-show');
+});
+	
+

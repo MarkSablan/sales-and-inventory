@@ -133,6 +133,64 @@ body{
 	max-height: 0;
 }
 
+/*accordion nav icons' layout*/
+.accordion-nav .item .title-cont{
+	display: flex;
+}
+
+.accordion-nav .item .title-cont .icon{
+	margin: 6px 1em 0 auto;
+}
+
+.accordion-nav .item .title-cont .icon{
+	width: 23px;
+	height: 23px;
+  	-webkit-mask-size: cover;
+  	mask-size: cover;
+  	background-color: #0ca8cc; 
+}
+
+.icon:hover{
+  	background-color: #0a7891; 
+}
+
+/*accordion nav icons*/
+.sales-icon{
+	-webkit-mask: url('../img/cashier-1.svg') no-repeat 50% 50%;
+}
+
+.dashboard-icon{
+	-webkit-mask: url('../img/time-passing.svg') no-repeat 50% 50%;
+}
+
+.stock-icon{
+	-webkit-mask: url('../img/box.svg') no-repeat 50% 50%;
+}
+
+.supplier-icon{
+	-webkit-mask: url('../img/delivery-cart.svg') no-repeat 50% 50%;
+}
+
+.payment-icon{
+	-webkit-mask: url('../img/get-money.svg') no-repeat 50% 50%;
+}
+
+.customer-icon{
+	-webkit-mask: url('../img/basket-2.svg') no-repeat 50% 50%;
+}
+
+.pending-icon{
+	-webkit-mask: url('../img/money.svg') no-repeat 50% 50%;
+}
+		
+.outstanding-icon{
+	-webkit-mask: url('../img/folder-1.svg') no-repeat 50% 50%;
+}
+
+.report-icon{
+	-webkit-mask: url('../img/presentation-15.svg') no-repeat 50% 50%;
+}
+
 /*open sub-menu*/
 .drop-sub-menu{
 	padding-top: 15px;
@@ -147,7 +205,20 @@ body{
 	position: relative;
 }
 
+/*.accordion-nav .item:hover .arrow{
+	display: none;
+}*/
+
+/*.accordion-nav .item:hover{
+	background-color: #111;
+	
+}	*/
+
 .accordion-nav .item .sub-menu *:hover{
+	background-color: #111;
+}
+
+.accordion-nav .item .active{
 	background-color: #111;
 }
 
@@ -211,7 +282,7 @@ body{
 }
 
 .main-content .main-title h4{
-	margin: 0;
+	margin: 0 0 0 0;
 	padding: 0.5em 0;
 }
 
@@ -252,6 +323,14 @@ td, th {
     font-size: 12px;
     padding: 5px;
     overflow-x: hidden;
+}
+
+input{
+	border-radius: 5px;
+	padding: 0.5em;
+	border: 0.5px #adadad solid;
+	/*border-right: 0;*/
+	outline: none;
 }
 
 /*Tabs .cont-tabs*/
