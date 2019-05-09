@@ -1,6 +1,5 @@
-// $(document).on('load', function(){
-// 	createChart('bar');
-// });
+let table = $('.table-flat');
+
 setTimeout(function(){
 	createChart('bar');
 }, 200);
@@ -44,5 +43,42 @@ $('.accordion-nav').find('.item').on('click', function (){
 $('.add-btn').on('click', function(){
 	$('#add-record').toggleClass('add-record-show');
 });
-	
 
+// table row selection
+table.find('tbody').find('tr').on('click', function(){
+	let tbody = $(this).parent();
+	let cbox = tbody.find('input[type="checkbox"]');
+
+	// checks the individual check boxes
+	// if unchecked, remove highlight ('selected class')
+	cbox.each(function(){
+		// console.log($(this).prop('checked'));
+		if($(this).prop('checked') == false) $(this).parent().parent().removeClass('selected');
+	});
+	// highlights the selected elements
+	// if()
+	$(this).addClass('selected');
+});
+
+// individual checkbox
+table.find('tbody').find('input[type="checkbox"]').on('click', function(){
+	let input = $(this);
+	if(input.prop('checked') == true){
+		// add class 'selected' to the td > tr element
+		input.parent().parent().addClass('selected');
+	}else{
+		input.parent().parent().removeClass('selected');
+	}
+});
+
+table.find('thead').find('input[type="checkbox"]').on('click', function(){
+	if($(this).prop('checked') == true){
+		table.find('tbody').find('input[type="checkbox"]').prop('checked', true);
+		table.find('tbody').find('tr').addClass('selected');
+
+	}else{
+		table.find('tbody').find('input[type="checkbox"]').prop('checked', false);
+		table.find('tbody').find('tr').removeClass('selected');
+
+	}
+});
