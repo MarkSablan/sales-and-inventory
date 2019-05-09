@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>SIS | Dashboard</title>
+	<title>SIS | Inventory - Product</title>
 	
 	<link rel="stylesheet" type="text/css" href="./css/base-styles.css">
-	<link rel="stylesheet" type="text/css" href="./css/index-styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/records-styles.css">
 	<link rel="stylesheet" type="text/css" href="./css/chart.css"> 	
 
 	<script type="text/javascript" src="./lib/jquery.js"></script>
-	<script type="text/javascript" src="./lib/chart.js"></script>
 
 </head>
 <body>
@@ -32,8 +31,8 @@
 			<nav class="accordion-nav">
 
 				<div class="item">
-					<a class="title-cont active" href="#">
-						<div href="#" class="item-title">Dashboard</div>
+					<a href="index.html" class="title-cont">
+						<div class="item-title">Dashboard</div>
 						<div class="icon dashboard-icon"></div>
 					</a>
 				</div>
@@ -68,9 +67,9 @@
 						<div class="item-title">Inventory</div>
 						<div class="icon stock-icon"></div>
 					</a>
-					<div class="sub-menu hide-sub">
+					<div class="sub-menu drop-sub-menu">
 						<a href="records-stock.html">Stock</a>
-						<a href="records-product.html">Products</a>
+						<a href="" class="active">Products</a>
 						<a href="#">Categories</a>
 						<a href="#">Purchase Stock</a>
 						<a href="#">Statistics</a>
@@ -129,130 +128,114 @@
 			</nav>
 		</div>
 
+<!-- Main section -->
+
 		<div class="main" id="main">
 
 			<div class="top-section">
 				<div class="hbg-menu" id="hbg-menu">=</div>
-				<h4 class="comp-name" id="comp-name">Lorem ipsum dolor.</h4>
+				<h4 class="comp-name" id="comp-name">SIS</h4>
 			</div>
 			
 			<div class="main-content">
-				<div class="main-title"><h4>Dashboard</h4></div>
-				<section class="cards">
+<!-- Main Content -->
+<!-- Content title -->
+				<div class="main-title"><h4>Inventory > Product</h4></div>
 
-					<div class="card">
-						<h2>105</h2>
-						<p>Transactions Today</p>
-						<div class="card-footer">
-							<a href="#">More Info</a>
-						</div>
-					</div>
-					<div class="card">
-						<h2>4%</h2>
-						<p>Sales Growth</p>
-						<div class="card-footer">
-							<a href="#">More Info</a>
-						</div>
-					</div>
-					<div class="card">
-						<h2>Php 10,100</h2>
-						<p>Sales Today</p>
-						<div class="card-footer">
-							<a href="#">More Info</a>
-						</div>
-					</div>
-					<div class="card">
-						<h2>Lorem Ipsum</h2>
-						<p>Top Selling Product</p>
-						<div class="card-footer">
-							<a href="#">More Info</a>
-						</div>
-					</div>
+				<!-- Contents -->
+				<section id="section-a">
 					
+					<div class="search">
+						<input class="search-field" type="text"><button class="search-btn">0</button><button class="clear-btn">X</button>
+					</div>
+
+					<div class="button-group">
+						<button>Print</button>
+						<button>Filter</button>
+						<button class="add-btn">Add Record</button>
+					</div>
+
+				
 				</section>
 
-				<section class="contents">
-					
-					<div class="cont">
-						<div class="cont-header">
-							<h3 class="cont-title">Lorem ipsum dolor.</h3>
-							<div class="cont-tabs">
-								<div class="tab" onclick="toggle('bar')">
-									<div class="indicator active-top"></div>
-									Bar Chart
-								</div>
-								<div class="tab" onclick="toggle('pie')">
-									<div class="indicator"></div>
-									Pie Chart
-								</div>
-							</div>
-						</div>
+				<section id="section-b">
+					<!-- <table>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Last Name</th>
+								<th>First Name</th>
+								<th>Phone Number</th>
+								<th>Email Address</th>
+								<th>Address</th>
+							</tr>
+						</thead>
 
-						<div class="cont-main">
-							<canvas id="chart" height="350px" style="margin: 0 auto"></canvas>
-						</div>
-					</div>
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>sablan</td>
+								<td>mark</td>
+								<td>019218237</td>
+								<td>makguererro.011@gmail.com</td>
+								<td>Caint, Rizal</td>
+							</tr>
+						</tbody>
+					</table> -->
 
-					<div class="cont">
-						<div class="cont-header">
-							<h3 class="cont-title">Lorem ipsum.</h3>
-							<div class="cont-tabs">
-								<div class="tab">
-									<div class="indicator active-top"></div>
-									Lorem
-								</div>
-								<div class="tab">
-									<div class="indicator"></div>
-									Ipsum
-								</div>
-							</div>
-						</div>
+					<table class="table-flat">
+						<div class="table-title"><p class="th-title">Products</p></div>
+						<thead>
+							<tr class="table-headings">
+								<th class="col-20"><input type="checkbox"></th>
+								<th class="col-50">ID</th>
+								<th>Name</th>
+								<th class="col-70">Price</th>
+								<th class="col-50">Qauntity</th>
+								<th class="col-120">Unit</th>
+								<th>Description</th>
+								<th class="col-action col-50">ACTN</th>
+							</tr>
+						</thead>
 
-						<div class="scroll-container">
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-							<div class="scroll-content">
-								<h4 class="title">Lorem ipsum dolor sit amet.</h4>
-							</div>
-						</div>
-					</div>
-
-
+						<tbody id="customersTbl">
+							<tr>
+								<th class="col-20"><input type="checkbox"></th>
+								<td class="col-50">001</td>
+								<td>Stickwell Pang Singhot</td>
+								<td class="col-70">$500</td>
+								<td class="col-50">4000</td>
+								<td class="col-120">Box(1x50)</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, consectetur.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
+				
+			</div>
+
+			<div id="add-record" class="add-record">
+				<div class="header">
+					<h3>Add Record - <span id="type:product">Product</span></h3>
+					<div class="close-btn add-btn">X</div>
+				</div>
+				<div class="fields">
+					<label for="first-name" >First Name</label>
+					<input type="text" name="first-name" required="">
+					<label for="last-name">Last Name</label>
+					<input type="text" name="last-name" required="">
+					<label for="phone">Phone Number</label>
+					<input type="phone" name="phone" required="">
+					<label for="email">Email Address</label>
+					<input type="email" name="email" required="">
+					<label for="address">Address</label>
+					<input type="text" name="address" required="">
+				</div>
+
+				<div class="footer">
+					<input type="submit">
+				</div>
 			</div>
 
 		</div>
@@ -260,7 +243,7 @@
 	</div>
 
 	<script type="text/javascript" src="./js/general-scripts.js"></script>
-	<script type="text/javascript" src="./js/chart-scripts.js"></script>
+	<!-- <script type="text/javascript" src="./js/chart-scripts.js"></script> -->
 
 </body>
 </html>
