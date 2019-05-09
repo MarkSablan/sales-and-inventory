@@ -58,7 +58,7 @@
 
 .main .main-content .contents{
 	width: 100%;
-	height: calc(100vh - 275px);
+	height: calc(100vh - 265px);
 	padding: 20px 0;
 	display: grid;
 	grid-template-columns: 3fr 2fr;

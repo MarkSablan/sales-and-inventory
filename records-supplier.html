@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SIS | Supplier - View</title>
+	
+	<link rel="stylesheet" type="text/css" href="./css/base-styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/records-styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/chart.css"> 	
+
+	<script type="text/javascript" src="./lib/jquery.js"></script>
+
+</head>
+<body>
+	
+	<div class="container">	
+		
+		<div class="sidebar" id="sidebar">
+			
+			<div class="top-section">
+				<h4>SIS</h4>
+			</div>
+
+			<div class="profile">
+				<img src="./img/picture.jpg" alt="profile-pic">
+				<h5 class="name">Lastname Firstname</h5>
+			</div>
+
+			<h5 class="nav-title">Main Navigation</h5>
+<!-- Navigation -->
+			<nav class="accordion-nav">
+
+				<div class="item">
+					<a href="index.html" class="title-cont">
+						<div class="item-title">Dashboard</div>
+						<div class="icon dashboard-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Customer</div>
+						<div class="icon customer-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="records-customer.html" >Records</a>
+						<a href="#">Lorem</a>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Supplier</div>
+						<div class="icon supplier-icon"></div>
+					</a>
+					<div class="sub-menu drop-sub-menu">
+						<a href="#" class="active">Records</a>
+						<a href="#">Lorem</a>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Inventory</div>
+						<div class="icon stock-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="records-stock.html">Stock</a>
+						<a href="#">Products</a>
+						<a href="#">Categories</a>
+						<a href="#">Purchase Stock</a>
+						<a href="#">Statistics</a>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Sales</div>
+						<div class="icon sales-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="#">Add Sales</a>
+						<a href="#">View Sale</a>
+					</div>
+				</div>
+	
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Payment</div>
+						<div class="icon payment-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Outstanding</div>
+						<div class="icon outstanding-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Pending</div>
+						<div class="icon pending-icon"></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<div class="arrow"></div>
+					<a href="#" class="title-cont">
+						<div class="item-title">Report</div>
+						<div class="icon report-icon"></div>
+					</a>
+					<div class="sub-menu hide-sub">
+						<a href="#">Sales</a>
+						<a href="#">Inventory</a>
+					</div>
+				</div>
+
+				<div class="nav-footer">Lorem ipsum dolor sit amet.</div>
+			</nav>
+
+		</div>
+
+<!-- Main section -->
+
+		<div class="main" id="main">
+
+			<div class="top-section">
+				<div class="hbg-menu" id="hbg-menu">=</div>
+				<h4 class="comp-name" id="comp-name">SIS</h4>
+			</div>
+			
+			<div class="main-content">
+<!-- Main Content -->
+<!-- Content title -->
+				<div class="main-title"><h4>Supplier > Records</h4></div>
+
+				<!-- Contents -->
+				<section id="section-a">
+					
+					<div class="search">
+						<input class="search-field" type="text"><button class="search-btn">0</button><button class="clear-btn">X</button>
+					</div>
+
+					<div class="button-group">
+						<button>Print</button>
+						<button>Filter</button>
+						<button class="add-btn">Add Record</button>
+					</div>
+
+				
+				</section>
+
+				<section id="section-b">
+					<!-- <table>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Last Name</th>
+								<th>First Name</th>
+								<th>Phone Number</th>
+								<th>Email Address</th>
+								<th>Address</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>sablan</td>
+								<td>mark</td>
+								<td>019218237</td>
+								<td>makguererro.011@gmail.com</td>
+								<td>Caint, Rizal</td>
+							</tr>
+						</tbody>
+					</table> -->
+
+					<table class="table-flat">
+						<div class="table-title"><p class="th-title">Supplier List</p></div>
+						<thead>
+							<tr class="table-headings">
+								<th class="col-50">ID</th>
+								<th class="col-200">Name</th>
+								<th class="col-150">Contact</th>
+								<th class="col-300">Address</th>
+								<th>Description</th>
+								<th class="col-action col-50">ACTN</th>
+							</tr>
+						</thead>
+
+						<tbody id="suppliersTbl">
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-200">Megatrade</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Taytay, Rizal</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veniam numquam nisi voluptatum, quibusdam labore deleniti qui et, nihil sit.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">002</td>
+								<td class="col-200">Boysen</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Karangalan, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat earum quam veritatis at illo aliquam eaque autem non magnam omnis, pariatur sequi modi iure, blanditiis cum odio. Ratione, fuga?</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">003</td>
+								<td class="col-200">Lorem ipsum dolor sit amet.</td>
+								<td class="col-150">09312237236</td>
+								<td class="col-300">Rosal st., Decastro Subd., Sta Luica, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, totam.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-200">Megatrade</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Taytay, Rizal</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veniam numquam nisi voluptatum, quibusdam labore deleniti qui et, nihil sit.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">002</td>
+								<td class="col-200">Boysen</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Karangalan, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat earum quam veritatis at illo aliquam eaque autem non magnam omnis, pariatur sequi modi iure, blanditiis cum odio. Ratione, fuga?</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">003</td>
+								<td class="col-200">Lorem ipsum dolor sit amet.</td>
+								<td class="col-150">09312237236</td>
+								<td class="col-300">Rosal st., Decastro Subd., Sta Luica, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, totam.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-200">Megatrade</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Taytay, Rizal</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veniam numquam nisi voluptatum, quibusdam labore deleniti qui et, nihil sit.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">002</td>
+								<td class="col-200">Boysen</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Karangalan, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat earum quam veritatis at illo aliquam eaque autem non magnam omnis, pariatur sequi modi iure, blanditiis cum odio. Ratione, fuga?</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">003</td>
+								<td class="col-200">Lorem ipsum dolor sit amet.</td>
+								<td class="col-150">09312237236</td>
+								<td class="col-300">Rosal st., Decastro Subd., Sta Luica, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, totam.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-200">Megatrade</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Taytay, Rizal</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veniam numquam nisi voluptatum, quibusdam labore deleniti qui et, nihil sit.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">002</td>
+								<td class="col-200">Boysen</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Karangalan, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat earum quam veritatis at illo aliquam eaque autem non magnam omnis, pariatur sequi modi iure, blanditiis cum odio. Ratione, fuga?</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">003</td>
+								<td class="col-200">Lorem ipsum dolor sit amet.</td>
+								<td class="col-150">09312237236</td>
+								<td class="col-300">Rosal st., Decastro Subd., Sta Luica, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, totam.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-200">Megatrade</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Taytay, Rizal</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veniam numquam nisi voluptatum, quibusdam labore deleniti qui et, nihil sit.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">002</td>
+								<td class="col-200">Boysen</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Karangalan, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat earum quam veritatis at illo aliquam eaque autem non magnam omnis, pariatur sequi modi iure, blanditiis cum odio. Ratione, fuga?</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">003</td>
+								<td class="col-200">Lorem ipsum dolor sit amet.</td>
+								<td class="col-150">09312237236</td>
+								<td class="col-300">Rosal st., Decastro Subd., Sta Luica, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, totam.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-200">Megatrade</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Taytay, Rizal</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veniam numquam nisi voluptatum, quibusdam labore deleniti qui et, nihil sit.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">002</td>
+								<td class="col-200">Boysen</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Karangalan, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat earum quam veritatis at illo aliquam eaque autem non magnam omnis, pariatur sequi modi iure, blanditiis cum odio. Ratione, fuga?</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">003</td>
+								<td class="col-200">Lorem ipsum dolor sit amet.</td>
+								<td class="col-150">09312237236</td>
+								<td class="col-300">Rosal st., Decastro Subd., Sta Luica, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, totam.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">001</td>
+								<td class="col-200">Megatrade</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Taytay, Rizal</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veniam numquam nisi voluptatum, quibusdam labore deleniti qui et, nihil sit.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">002</td>
+								<td class="col-200">Boysen</td>
+								<td class="col-150">+63122371236</td>
+								<td class="col-300">Karangalan, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel fugiat earum quam veritatis at illo aliquam eaque autem non magnam omnis, pariatur sequi modi iure, blanditiis cum odio. Ratione, fuga?</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							<tr>
+								<td class="col-50">003</td>
+								<td class="col-200">Lorem ipsum dolor sit amet.</td>
+								<td class="col-150">09312237236</td>
+								<td class="col-300">Rosal st., Decastro Subd., Sta Luica, Pasig City</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, totam.</td>
+								<td class="col-action col-50">ACTN</td>
+							</tr>
+
+							
+						</tbody>
+					</table>
+				</section>
+				
+			</div>
+
+			<div id="add-record" class="add-record">
+				<div class="header">
+					<h3>Add Record - <span id="type:supplier">Supplier</span></h3>
+					<div class="close-btn add-btn">X</div>
+				</div>
+				<div class="fields">
+					<label for="first-name" >Name</label>
+					<input type="text" name="name" required="">
+					<label for="phone">Contact Number</label>
+					<input type="phone" name="phone" required="">
+					<label for="address">Address</label>
+					<input type="text" name="address" required="">
+					<label for="description">Description</label>
+					<input type="text" name="description" required="">
+				</div>
+
+				<div class="footer">
+					<input type="submit">
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="./js/general-scripts.js"></script>
+	<!-- <script type="text/javascript" src="./js/chart-scripts.js"></script> -->
+
+</body>
+</html>
+
+
+<!-- Structure -->
+
+<!-- 
+body
+	contaner -- whole window container
+
+		Sidebar 
+
+			navigation section
+
+		Sidebar
+
+
+		main -- main section
+
+			main-content  
+
+				-- contents
+
+			main-content
+
+		main
+
+	contaner
+
+body
+ -->
