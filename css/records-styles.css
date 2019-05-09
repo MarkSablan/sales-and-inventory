@@ -124,6 +124,7 @@ body{
 
 .table-flat tbody tr{
 	border: 0px solid;
+	border-left: 3px solid rgba(0,0,0,0);
 	cursor: pointer;
 }
 
@@ -133,11 +134,11 @@ body{
 }
 
 .table-flat tbody tr:hover{
-	background-color: #adadad;
+	border-left: 3px blue solid;
 }
 /*for selecting a table row */
 .table-flat tbody .selected{
-	transition: 0.5s;
+	transition: 0.2s;
 	background-color: #2c485b;
 	color: white;
 }
