@@ -191,6 +191,13 @@ body{
 	-webkit-mask: url('../img/presentation-15.svg') no-repeat 50% 50%;
 }
 
+.action-icon{
+	-webkit-mask: url('../img/action.svg') no-repeat 50% 50%;
+	width: 20px;
+	height: 20px;
+	background-color: #030303;
+}
+
 /*open sub-menu*/
 .drop-sub-menu{
 	padding-top: 15px;
@@ -230,6 +237,7 @@ body{
 }
 
 .main{
+	position: relative;
 	width: calc(100% - 220px);
 	height: 100%;
 	background-color: #f9f9f9;
@@ -440,3 +448,27 @@ input{
 .scroll-container::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+
+/*dialog box*/
+.dialog-box{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	width: 400px;
+	height: 300px;
+	background: #333;
+	display: none;
+	transition: 0.1s;
+}
+
+.show-dialog{
+	display: block;
+}
+
+/*.main:hover .dialog-box{
+	width: 400px;
+	height: 300px
+}*/
+

@@ -1,4 +1,6 @@
 let table = $('.table-flat');
+let actionBtn = $('.action-icon');
+let stocksTbl = $('#stocksTbl');
 
 setTimeout(function(){
 	createChart('bar');
@@ -9,7 +11,6 @@ $('#hbg-menu').on('click', function(){
 	$('#main').toggleClass('main-toggled');
 	$('#comp-name').toggleClass('comp-name');
 	$('#comp-name').toggleClass('show-name');
-	console.log("awew");
 	myChart.destroy();
 
 	// delay for 600ms before the chart is created
@@ -60,6 +61,26 @@ table.find('tbody').find('tr').on('click', function(){
 	$(this).addClass('selected');
 });
 
+// display details of selected row
+stocksTbl.find('tr').on('click', function(){
+	// console.log(awew);
+	let tr = $(this);
+	let display = $('.details');
+	let id = tr.find('.id').text();
+	let name = tr.find('.name').text();
+	let price = tr.find('.price').text();
+	let quantity = tr.find('.quantity').text();
+	let unit = tr.find('.unit').text();
+
+	let output = '<div class="scroll-content"><h4 class="title">'+ id +'</h4></div>' +
+				'<div class="scroll-content"><h4 class="title">'+ name +'</h4></div>' +
+				'<div class="scroll-content"><h4 class="title">'+ price +'</h4></div>' +
+				'<div class="scroll-content"><h4 class="title">'+ quantity +'</h4></div>' +
+				'<div class="scroll-content"><h4 class="title">'+ unit +'</h4></div>';
+	
+	display.html(output);
+});
+
 // individual checkbox
 table.find('tbody').find('input[type="checkbox"]').on('click', function(){
 	let input = $(this);
@@ -82,3 +103,15 @@ table.find('thead').find('input[type="checkbox"]').on('click', function(){
 
 	}
 });
+
+actionBtn.on('click', function(){
+	let parent = $(this).parent().parent();
+	let id = parent.find('.id').text();
+	let	name = parent.find('.name').text();
+	let dialogBox = $('.dialog-box');
+	dialogBox.toggleClass('show-dialog');
+	dialogBox.find('.cont-title').text(id + ' ' + name);
+
+	dialogBox.find('contents').text($(this));
+});
+
